@@ -8,6 +8,7 @@ import {
   type ExhibitDefinition,
   type ExhibitId,
 } from './data'
+import cpLogo from '../CP.png'
 import './styles.css'
 
 type ChecklistState = Record<ExhibitId, ChecklistEntry[]>
@@ -256,13 +257,17 @@ export default function App() {
       <div className="ambient ambient-two" />
 
       <main className="layout">
+        <div className="page-brand" aria-hidden="true">
+          <img className="hero-logo" src={cpLogo} alt="" />
+        </div>
+
         <section className="hero-card">
           <div>
             <p className="eyebrow">MEC Exhibit Log</p>
             <h1>Daily MEC Exhibit Checklist</h1>
             <p className="hero-copy">
               This is a simple locally hosted checklist app for daily exhibit walkthroughs created by <a className="author-link" href="https://vantaproject.space" target="_blank" rel="noopener noreferrer">Jacob Raifsnider</a>. This app is designed to track 
-              daily status of the new MEC exhibits <br /> (Power of Place, Wellspring, Torn), along with any issues that come up during walkthroughs. <br /> This is mainly meant to be used by me lol :) Data is saved in your browser automatically.
+              daily status of the new MEC exhibits (Power of Place, Wellspring, Torn), along with any issues that come up during walkthroughs. <br /><br /> This is mainly meant to be used by me lol :)
            </p>
           </div>
 
